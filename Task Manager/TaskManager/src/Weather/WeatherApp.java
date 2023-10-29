@@ -23,7 +23,7 @@ public class WeatherApp {
         double longitude = (double) location.get("longitude");
         
         // build API reques URL with location coordinates
-        String urlString = "https://api.open-meteo.com/v1/forecast?latitude=-24.7859&longitude=-65.4117&hourly=temperature_2m,weathercode&timezone=auto";
+        String urlString = "https://api.open-meteo.com/v1/forecast?latitude=-24.7859&longitude=-65.4117&hourly=temperature_2m,weathercode&timezone=America%2FSao_Paulo";
         
         try {
             // call api and get response
@@ -82,7 +82,7 @@ public class WeatherApp {
     }
     
     public static JSONArray getLocationData() {
-        String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=Salta&count=10&language=en&format=json";
+        String urlString = "https://geocoding-api.open-meteo.com/v1/search?name=Salta&count=1&language=en&format=json";
         
         try {
             // call API and get a response
@@ -162,7 +162,7 @@ public class WeatherApp {
         LocalDateTime currentDateTime = LocalDateTime.now();
         
         // format date 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T''HH'':00'");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH':00'");
         
         // format and print the current date n' time
         String formattedDateTime = currentDateTime.format(formatter);
