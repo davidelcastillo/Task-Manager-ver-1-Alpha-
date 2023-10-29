@@ -86,19 +86,19 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Component id="weatherConditionImage" min="-2" pref="262" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                               <Component id="AccpBm" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Component id="temperatureTx" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="CityTx" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="weatherConditionImage" min="-2" pref="278" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -108,16 +108,16 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Component id="WlmLb" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="weatherConditionImage" min="-2" pref="135" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="weatherConditionImage" min="-2" pref="218" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="CityTx" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="temperatureTx" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="CityTx" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="185" max="32767" attributes="0"/>
+                      <EmptySpace pref="142" max="32767" attributes="0"/>
                       <Component id="AccpBm" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
@@ -191,7 +191,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="weatherConditionImage">
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String weatherCondition = (String) weatherData.get(&quot;weather_condition&quot;);&#xa;&#xa;switch (weatherCondition) {&#xa;    case &quot;Clear&quot;:&#xa;        weatherConditionImage = new javax.swing.JLabel(loadImage(&quot;src/assets/clear.png&quot;));&#xa;        break;&#xa;    case &quot;Cloudy&quot;:&#xa;        weatherConditionImage = new javax.swing.JLabel(loadImage(&quot;src/assets/cloudy.png&quot;));&#xa;        break;&#xa;    case &quot;Rain&quot;:&#xa;        weatherConditionImage = new javax.swing.JLabel(loadImage(&quot;src/assets/rain.png&quot;));&#xa;        break;&#xa;    case &quot;Snow&quot;:&#xa;        weatherConditionImage = new javax.swing.JLabel(loadImage(&quot;src/assets/snow.png&quot;));&#xa;        break;&#xa;    }"/>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="String weatherCondition = (String) weatherData.get(&quot;weather_condition&quot;);&#xa;&#xa;switch (weatherCondition) {&#xa;    case &quot;Clear&quot;:&#xa;        weatherConditionImage.setIcon(loadImage(&quot;src/assets/clear.png&quot;));&#xa;        break;&#xa;    case &quot;Cloudy&quot;:&#xa;        weatherConditionImage.setIcon(loadImage(&quot;src/assets/cloudy.png&quot;));&#xa;        break;&#xa;    case &quot;Rain&quot;:&#xa;        weatherConditionImage.setIcon(loadImage(&quot;src/assets/rain.png&quot;));&#xa;        break;&#xa;    case &quot;Snow&quot;:&#xa;        weatherConditionImage.setIcon(loadImage(&quot;src/assets/snow.png&quot;));&#xa;        break;&#xa;    }"/>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JLabel(loadImage(&quot;src/assets/cloudy.png&quot;))"/>
               </AuxValues>
             </Component>

@@ -5,6 +5,7 @@ import com.frames.Clase_label.TextBubbleBorder;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.border.AbstractBorder;
@@ -119,30 +120,30 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(WlmPanelLayout.createSequentialGroup()
                 .addGroup(WlmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(WlmPanelLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(weatherConditionImage, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(WlmPanelLayout.createSequentialGroup()
                         .addGap(99, 99, 99)
                         .addComponent(AccpBm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(WlmPanelLayout.createSequentialGroup()
-                        .addGap(74, 74, 74)
+                        .addGap(55, 55, 55)
                         .addComponent(temperatureTx)
                         .addGap(18, 18, 18)
-                        .addComponent(CityTx)))
+                        .addComponent(CityTx))
+                    .addGroup(WlmPanelLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(weatherConditionImage, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         WlmPanelLayout.setVerticalGroup(
             WlmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WlmPanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(20, 20, 20)
                 .addComponent(WlmLb)
-                .addGap(30, 30, 30)
-                .addComponent(weatherConditionImage, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
+                .addComponent(weatherConditionImage, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(WlmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CityTx)
-                    .addComponent(temperatureTx))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
+                    .addComponent(temperatureTx)
+                    .addComponent(CityTx))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(AccpBm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
@@ -152,16 +153,16 @@ public class MainFrame extends javax.swing.JFrame {
 
         switch (weatherCondition) {
             case "Clear":
-            weatherConditionImage = new javax.swing.JLabel(loadImage("src/assets/clear.png"));
+            weatherConditionImage.setIcon(loadImage("src/assets/clear.png"));
             break;
             case "Cloudy":
-            weatherConditionImage = new javax.swing.JLabel(loadImage("src/assets/cloudy.png"));
+            weatherConditionImage.setIcon(loadImage("src/assets/cloudy.png"));
             break;
             case "Rain":
-            weatherConditionImage = new javax.swing.JLabel(loadImage("src/assets/rain.png"));
+            weatherConditionImage.setIcon(loadImage("src/assets/rain.png"));
             break;
             case "Snow":
-            weatherConditionImage = new javax.swing.JLabel(loadImage("src/assets/snow.png"));
+            weatherConditionImage.setIcon(loadImage("src/assets/snow.png"));
             break;
         }
         double temperature = (double) weatherData.get("temperature");
@@ -315,7 +316,7 @@ public class MainFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
